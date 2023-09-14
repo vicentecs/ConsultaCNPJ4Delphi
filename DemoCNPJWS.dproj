@@ -1,0 +1,204 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{7E973895-6811-4A8B-8323-43B41AE11003}</ProjectGuid>
+        <ProjectVersion>18.6</ProjectVersion>
+        <FrameworkType>VCL</FrameworkType>
+        <MainSource>DemoCNPJWS.dpr</MainSource>
+        <Base>True</Base>
+        <Config Condition="'$(Config)'==''">Debug</Config>
+        <Platform Condition="'$(Platform)'==''">Win32</Platform>
+        <TargetedPlatforms>1</TargetedPlatforms>
+        <AppType>Application</AppType>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
+        <Base_Win32>true</Base_Win32>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Base)'=='true') or '$(Base_Win64)'!=''">
+        <Base_Win64>true</Base_Win64>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_1)'!=''">
+        <Cfg_1>true</Cfg_1>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win32)'!=''">
+        <Cfg_1_Win32>true</Cfg_1_Win32>
+        <CfgParent>Cfg_1</CfgParent>
+        <Cfg_1>true</Cfg_1>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_2)'!=''">
+        <Cfg_2>true</Cfg_2>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win32)'!=''">
+        <Cfg_2_Win32>true</Cfg_2_Win32>
+        <CfgParent>Cfg_2</CfgParent>
+        <Cfg_2>true</Cfg_2>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base)'!=''">
+        <DCC_DcuOutput>.\$(Platform)\$(Config)</DCC_DcuOutput>
+        <DCC_ExeOutput>.\$(Platform)\$(Config)</DCC_ExeOutput>
+        <DCC_E>false</DCC_E>
+        <DCC_N>false</DCC_N>
+        <DCC_S>false</DCC_S>
+        <DCC_F>false</DCC_F>
+        <DCC_K>false</DCC_K>
+        <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;$(DCC_Namespace)</DCC_Namespace>
+        <Icon_MainIcon>$(BDS)\bin\delphi_PROJECTICON.ico</Icon_MainIcon>
+        <UWP_DelphiLogo44>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png</UWP_DelphiLogo44>
+        <UWP_DelphiLogo150>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png</UWP_DelphiLogo150>
+        <SanitizedProjectName>DemoCNPJWS</SanitizedProjectName>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win32)'!=''">
+        <DCC_UsePackage>DBXSqliteDriver;dxFlowChartRS26;dxPSdxMapControlLnkRS26;DBXDb2Driver;vclactnband;dxBarRS26;vclFireDAC;dxFireDACEMFRS26;tethering;dxSpreadSheetInplaceRichEditRS26;FireDACADSDriver;ACBr_BoletoFPDF;ACBr_BPeDabpeESCPOS;JvPluginSystem;ACBr_BPe;TMSQueryStudio;dxRichEditCoreRS26;dxPSdxSpreadSheetLnkRS26;FireDACMSSQLDriver;vcltouch;JvBands;ACBr_NFe;vcldb;ACBr_NFeDanfeFR;svn;JvJans;dxPSTeeChartRS26;ACBr_NFeDanfeESCPOS;ACBr_PAFNFCe;ACBr_OFX;TMSScripter_Memo;JvDotNetCtrls;dxGDIPlusRS26;dxPSdxFCLnkRS26;dxCloudServiceLibraryRS26;frxTee26;ACBr_SATExtratoFR;dxPSLnksRS26;FireDACDBXDriver;cxGridRS26;dxPsPrVwAdvRS26;dxPDFViewerRS26;ACBr_NFSeDanfseFR;vclx;dxPScxTLLnkRS26;ACBr_SATExtratoRL;ACBr_GTIN;RESTBackendComponents;ACBr_Reinf;VCLRESTComponents;fsTee26;remotedb;vclie;bindengine;CloudService;rbRCL1926;JvHMI;FireDACMySQLDriver;dxmdsRS26;ACBr_PAF;ACBr_SATECFVirtual;frx26;dxdborRS26;DataSnapClient;ACBr_OpenDelivery;dxFireDACServerModeRS26;bindcompdbx;ACBr_CTeDacteRL;ACBr_TCP;DBXSybaseASEDriver;IndyIPServer;ACBr_CTe;sparkle;tmsbcl;IndySystem;fsADO26;cxPivotGridRS26;cxTreeListdxBarPopupMenuRS26;ACBr_PagFor;dsnapcon;cxTreeListRS26;dxPScxPivotGridLnkRS26;ACBre_Social;cxSchedulerRibbonStyleEventEditorRS26;TMSWorkflow;rbIDE1926;FireDACMSAccDriver;fmxFireDAC;FireDACInfxDriver;vclimg;dxSpreadSheetRS26;Jcl;dxBarExtItemsRS26;dxPSCoreRS26;dxPSdxGaugeControlLnkRS26;ACBr_SPED;emshosting;ACBr_SPEDImportar;ACBr_MDFe;ACBr_BoletoRL;ACBr_LFD;TMSDiagram;DBXOdbcDriver;FireDACTDataDriver;FMXTee;dxdbtrRS26;dxRichEditControlCoreRS26;soaprtl;DbxCommonDriver;rbRTL1926;dxFlowChartAdvancedCustomizeFormRS26;JvManagedThreads;ACBr_CIOT;dxDockingRS26;ACBr_NFSeDanfseRL;xmlrtl;soapmidas;DataSnapNativeClient;fmxobj;JvTimeFramework;cxLibraryRS26;rtl;emsserverresource;DbxClientDriver;TMSScripter_IDE;DBXSybaseASADriver;dxPScxSchedulerLnkRS26;JvSystem;JvStdCtrls;dxSpreadSheetConditionalFormattingDialogsRS26;ACBr_Convenio115;appanalytics;dxRibbonCustomizationFormRS26;cxSchedulerGridRS26;TMSLoggingPkgVCLDXE12;IndyIPClient;ACBr_DebitoAutomatico;bindcompvcl;TMSLoggingPkgCoreDXE12;dclRBE1926;TeeUI;dxADOEMFRS26;JvDocking;JvPascalInterpreter;VclSmp;ACBr_NFSeXDANFSeFR;FireDACODBCDriver;FixInsight_10_3;rbADO1926;JclVcl;DataSnapIndy10ServerTransport;aurelius;dxRibbonRS26;dxRichEditDocumentModelRS26;dxPScxCommonRS26;ACBr_Boleto;DataSnapProviderClient;ACBr_SEF2;FireDACMongoDBDriver;dxFlowChartDesignerRS26;PackageEntidades;JvControls;JvPrintPreview;dxPScxGridLnkRS26;rbUSERDesign1926;ACBr_NFSe;dxSpreadSheetCoreRS26;ACBr_MDFeDamdfeFR;RESTComponents;DBXInterBaseDriver;rbDB1926;rbCIDE1926;rbDAD1926;dxPScxExtCommonRS26;ACBr_NF3e;ACBr_TEFD;emsclientfiredac;ACBr_SATWS;DataSnapFireDAC;svnui;JvGlobus;frxFD26;rbRest1926;DBXMSSQLDriver;JvMM;ACBr_MDFeDamdfeRL;TMSScripter;DatasnapConnectorsFreePascal;dxRichEditControlRS26;dxGaugeControlRS26;dxorgcRS26;dxPScxVGridLnkRS26;ACBr_EDI;ACBr_ONE;bindcompfmx;JvNet;DBXOracleDriver;inetdb;JvAppFrm;ACBr_Diversos;dxBarDBNavRS26;dxDBXServerModeRS26;ACBr_GNREGuiaFR;FmxTeeUI;emsedge;ACBr_LCDPR;FireDACIBDriver;fmx;fmxdae;dxServerModeRS26;dxWizardControlRS26;rbUSER1926;ACBr_CTeDacteFR;JvWizards;dxTabbedMDIRS26;ACBr_Ponto;fs26;dxEMFRS26;dbexpress;IndyCore;rbRIDE1926;xdata;dxComnRS26;frxIntIO26;rbDIDE1926;dsnap;DataSnapCommon;emsclient;JvPageComps;FireDACCommon;JvDB;ACBr_NFSeX;DataSnapConnectors;cxSchedulerTreeBrowserRS26;dxADOServerModeRS26;ACBR_DeSTDA;soapserver;ACBr_SAT;TMSScripter_Legacy;JclDeveloperTools;TMSLoggingPkgFMXDXE12;cxVerticalGridRS26;TMSScripter_VCL;dxtrmdRS26;FireDACOracleDriver;DBXMySQLDriver;JvCmp;cxSchedulerRS26;cxSchedulerWebServiceStorageRS26;DBXFirebirdDriver;dxPSdxLCLnkRS26;rbTCUI1926;ACBr_Sintegra;FireDACCommonODBC;FireDACCommonDriver;dxMapControlRS26;ACBr_ADRCST;ACBr_GNRE;frxIntIOIndy26;inet;dxSpellCheckerRS26;IndyIPCommon;dclRBDBE1926;JvCustom;dxSpreadSheetCoreConditionalFormattingDialogsRS26;vcl;dxPSdxDBOCLnkRS26;ACBr_NFeDanfeRL;JvXPCtrls;rbRAP1926;frxDB26;ACBr_SATExtratoESCPOS;FireDACDb2Driver;dxSpreadSheetReportDesignerRS26;ACBr_Integrador;madExcept_;dxPScxPCProdRS26;dxNavBarRS26;dxCoreRS26;madBasic_;cxExportRS26;TeeDB;FireDAC;dxHttpIndyRequestRS26;dxPSPrVwRibbonRS26;JvCore;ACBr_Comum;frxe26;rbTC1926;FireDACSqliteDriver;FireDACPgDriver;JvCrypt;FireDACASADriver;dxPSRichEditControlLnkRS26;cxPivotGridChartRS26;rbBDE1926;ACBr_GNREGuiaRL;JvDlgs;JvRuntimeDesign;dxPSDBTeeChartRS26;Tee;DataSnapServer;dxPSdxDBTVLnkRS26;vclwinx;FireDACDSDriver;ACBr_OpenSSL;madDisAsm_;dxTileControlRS26;dxSkinsCoreRS26;CustomIPTransport;vcldsnap;dclRBADO1926;ACBr_PIXCD;bindcomp;Picpay;dxPSdxOCLnkRS26;DBXInformixDriver;ACBr_Serial;frce;dclTMSQueryStudio;dclRBFireDAC1926;ACBr_BlocoX;ACBr_NFSeXDanfseRL;dbxcds;ACBr_NFCeECFVirtual;adortl;ACBr_BoletoFR;dxSpreadSheetCoreDialogsRS26;ACBr_ANe;dxBarExtDBItemsRS26;dsnapxml;rbFireDAC1926;dbrtl;inetdbxpress;IndyProtocols;rbDBE1926;dxRichEditInplaceRS26;dxPSdxPDFViewerLnkRS26;JclContainers;ACBr_NF3eDANF3eESCPOS;ACBr_MTER;fmxase;$(DCC_UsePackage)</DCC_UsePackage>
+        <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+        <BT_BuildType>Debug</BT_BuildType>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win64)'!=''">
+        <DCC_UsePackage>DBXSqliteDriver;dxFlowChartRS26;dxPSdxMapControlLnkRS26;DBXDb2Driver;vclactnband;dxBarRS26;vclFireDAC;dxFireDACEMFRS26;tethering;dxSpreadSheetInplaceRichEditRS26;FireDACADSDriver;TMSQueryStudio;dxRichEditCoreRS26;dxPSdxSpreadSheetLnkRS26;FireDACMSSQLDriver;vcltouch;vcldb;dxPSTeeChartRS26;TMSScripter_Memo;dxGDIPlusRS26;dxPSdxFCLnkRS26;dxCloudServiceLibraryRS26;dxPSLnksRS26;FireDACDBXDriver;cxGridRS26;dxPsPrVwAdvRS26;dxPDFViewerRS26;vclx;dxPScxTLLnkRS26;RESTBackendComponents;VCLRESTComponents;remotedb;vclie;bindengine;CloudService;FireDACMySQLDriver;dxmdsRS26;dxdborRS26;DataSnapClient;dxFireDACServerModeRS26;bindcompdbx;DBXSybaseASEDriver;IndyIPServer;sparkle;tmsbcl;IndySystem;cxPivotGridRS26;cxTreeListdxBarPopupMenuRS26;dsnapcon;cxTreeListRS26;dxPScxPivotGridLnkRS26;cxSchedulerRibbonStyleEventEditorRS26;TMSWorkflow;FireDACMSAccDriver;fmxFireDAC;FireDACInfxDriver;vclimg;dxSpreadSheetRS26;dxBarExtItemsRS26;dxPSCoreRS26;dxPSdxGaugeControlLnkRS26;emshosting;TMSDiagram;DBXOdbcDriver;FireDACTDataDriver;FMXTee;dxdbtrRS26;dxRichEditControlCoreRS26;soaprtl;DbxCommonDriver;dxFlowChartAdvancedCustomizeFormRS26;dxDockingRS26;xmlrtl;soapmidas;DataSnapNativeClient;fmxobj;cxLibraryRS26;rtl;emsserverresource;DbxClientDriver;TMSScripter_IDE;DBXSybaseASADriver;dxPScxSchedulerLnkRS26;dxSpreadSheetConditionalFormattingDialogsRS26;appanalytics;dxRibbonCustomizationFormRS26;cxSchedulerGridRS26;TMSLoggingPkgVCLDXE12;IndyIPClient;bindcompvcl;TMSLoggingPkgCoreDXE12;TeeUI;dxADOEMFRS26;VclSmp;FireDACODBCDriver;DataSnapIndy10ServerTransport;aurelius;dxRibbonRS26;dxRichEditDocumentModelRS26;dxPScxCommonRS26;DataSnapProviderClient;FireDACMongoDBDriver;dxFlowChartDesignerRS26;dxPScxGridLnkRS26;dxSpreadSheetCoreRS26;RESTComponents;DBXInterBaseDriver;dxPScxExtCommonRS26;emsclientfiredac;DataSnapFireDAC;DBXMSSQLDriver;TMSScripter;DatasnapConnectorsFreePascal;dxRichEditControlRS26;dxGaugeControlRS26;dxorgcRS26;dxPScxVGridLnkRS26;bindcompfmx;DBXOracleDriver;inetdb;dxBarDBNavRS26;dxDBXServerModeRS26;FmxTeeUI;emsedge;FireDACIBDriver;fmx;fmxdae;dxServerModeRS26;dxWizardControlRS26;dxTabbedMDIRS26;dxEMFRS26;dbexpress;IndyCore;xdata;dxComnRS26;dsnap;DataSnapCommon;emsclient;FireDACCommon;DataSnapConnectors;cxSchedulerTreeBrowserRS26;dxADOServerModeRS26;soapserver;TMSScripter_Legacy;TMSLoggingPkgFMXDXE12;cxVerticalGridRS26;TMSScripter_VCL;dxtrmdRS26;FireDACOracleDriver;DBXMySQLDriver;cxSchedulerRS26;cxSchedulerWebServiceStorageRS26;DBXFirebirdDriver;dxPSdxLCLnkRS26;FireDACCommonODBC;FireDACCommonDriver;dxMapControlRS26;inet;dxSpellCheckerRS26;IndyIPCommon;dxSpreadSheetCoreConditionalFormattingDialogsRS26;vcl;dxPSdxDBOCLnkRS26;FireDACDb2Driver;dxSpreadSheetReportDesignerRS26;dxPScxPCProdRS26;dxNavBarRS26;dxCoreRS26;cxExportRS26;TeeDB;FireDAC;dxHttpIndyRequestRS26;dxPSPrVwRibbonRS26;FireDACSqliteDriver;FireDACPgDriver;FireDACASADriver;dxPSRichEditControlLnkRS26;cxPivotGridChartRS26;dxPSDBTeeChartRS26;Tee;DataSnapServer;dxPSdxDBTVLnkRS26;vclwinx;FireDACDSDriver;dxTileControlRS26;dxSkinsCoreRS26;CustomIPTransport;vcldsnap;bindcomp;dxPSdxOCLnkRS26;DBXInformixDriver;dbxcds;adortl;dxSpreadSheetCoreDialogsRS26;dxBarExtDBItemsRS26;dsnapxml;dbrtl;inetdbxpress;IndyProtocols;dxRichEditInplaceRS26;dxPSdxPDFViewerLnkRS26;fmxase;$(DCC_UsePackage)</DCC_UsePackage>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1)'!=''">
+        <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+        <DCC_DebugDCUs>true</DCC_DebugDCUs>
+        <DCC_Optimize>false</DCC_Optimize>
+        <DCC_GenerateStackFrames>true</DCC_GenerateStackFrames>
+        <DCC_DebugInfoInExe>true</DCC_DebugInfoInExe>
+        <DCC_RemoteDebug>true</DCC_RemoteDebug>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+        <DCC_RemoteDebug>false</DCC_RemoteDebug>
+        <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
+        <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2)'!=''">
+        <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+        <DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+        <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+        <DCC_DebugInformation>0</DCC_DebugInformation>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
+        <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
+        <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
+    </PropertyGroup>
+    <ItemGroup>
+        <DelphiCompile Include="$(MainSource)">
+            <MainSource>MainSource</MainSource>
+        </DelphiCompile>
+        <DCCReference Include="UMain.pas">
+            <Form>Form1</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="UCNPJWS.pas"/>
+        <BuildConfiguration Include="Release">
+            <Key>Cfg_2</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Base">
+            <Key>Base</Key>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Debug">
+            <Key>Cfg_1</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Delphi.Personality.12</Borland.Personality>
+        <Borland.ProjectType>Application</Borland.ProjectType>
+        <BorlandProject>
+            <Delphi.Personality>
+                <Source>
+                    <Source Name="MainSource">DemoCNPJWS.dpr</Source>
+                </Source>
+            </Delphi.Personality>
+            <Deployment Version="3">
+                <DeployFile LocalName="Win32\Debug\DemoCNPJWS.exe" Configuration="Debug" Class="ProjectOutput">
+                    <Platform Name="Win32">
+                        <RemoteName>DemoCNPJWS.exe</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployClass Name="DebugSymbols">
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="DependencyFramework">
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                        <Extensions>.dll;.bpl</Extensions>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Required="true" Name="DependencyPackage">
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                        <Extensions>.bpl</Extensions>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="File">
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Required="true" Name="ProjectOutput">
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectUWPManifest">
+                    <Platform Name="Win32">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Win64">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="UWP_DelphiLogo150">
+                    <Platform Name="Win32">
+                        <RemoteDir>Assets</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Win64">
+                        <RemoteDir>Assets</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="UWP_DelphiLogo44">
+                    <Platform Name="Win32">
+                        <RemoteDir>Assets</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Win64">
+                        <RemoteDir>Assets</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <ProjectRoot Platform="Win64" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="Win32" Name="$(PROJECTNAME)"/>
+            </Deployment>
+            <Platforms>
+                <Platform value="Win32">True</Platform>
+                <Platform value="Win64">False</Platform>
+            </Platforms>
+        </BorlandProject>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+    <Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+    <Import Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj" Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')"/>
+    <Import Project="$(MSBuildProjectName).deployproj" Condition="Exists('$(MSBuildProjectName).deployproj')"/>
+</Project>
