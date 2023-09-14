@@ -126,18 +126,29 @@ type
     FCnpj_digito_verificador: String;
     FCnpj_ordem: String;
     FCnpj_raiz: String;
+    FComplemento: String;
     FData_inicio_atividade: TDate;
     FData_situacao_cadastral: TDate;
+    FData_situacao_especial: String;
     FDdd1: String;
+    FDdd2: String;
+    FDdd_fax: String;
+    FEmail: String;
     FEstado: TEstadoClass;
+    FFax: String;
     FInscricoes_estaduais: TArray<TInscricoes_estaduaisClass>;
     FLogradouro: String;
+    FMotivo_situacao_cadastral: String;
+    FNome_cidade_exterior: String;
     FNome_fantasia: String;
     FNumero: String;
     FPais: TPaisClass;
     FSituacao_cadastral: String;
+    FSituacao_especial: String;
     FTelefone1: String;
+    FTelefone2: String;
     FTipo: String;
+    FTipo_logradouro: String;
   public
     property atividade_principal: TAtividade_principalClass read FAtividade_principal write FAtividade_principal;
     property atividades_secundarias: TArray<TAtividades_secundariasClass> read FAtividades_secundarias
@@ -150,19 +161,30 @@ type
     property cnpj_digito_verificador: String read FCnpj_digito_verificador write FCnpj_digito_verificador;
     property cnpj_ordem: String read FCnpj_ordem write FCnpj_ordem;
     property cnpj_raiz: String read FCnpj_raiz write FCnpj_raiz;
+    property complemento: String read FComplemento write FComplemento;
     property data_inicio_atividade: TDate read FData_inicio_atividade write FData_inicio_atividade;
     property data_situacao_cadastral: TDate read FData_situacao_cadastral write FData_situacao_cadastral;
+    property data_situacao_especial: String read FData_situacao_especial write FData_situacao_especial;
     property ddd1: String read FDdd1 write FDdd1;
+    property ddd2: String read FDdd2 write FDdd2;
+    property ddd_fax: String read FDdd_fax write FDdd_fax;
+    property email: String read FEmail write FEmail;
     property estado: TEstadoClass read FEstado write FEstado;
+    property fax: String read FFax write FFax;
     property inscricoes_estaduais: TArray<TInscricoes_estaduaisClass> read FInscricoes_estaduais
       write FInscricoes_estaduais;
     property logradouro: String read FLogradouro write FLogradouro;
+    property motivo_situacao_cadastral: String read FMotivo_situacao_cadastral write FMotivo_situacao_cadastral;
+    property nome_cidade_exterior: String read FNome_cidade_exterior write FNome_cidade_exterior;
     property nome_fantasia: String read FNome_fantasia write FNome_fantasia;
     property numero: String read FNumero write FNumero;
     property pais: TPaisClass read FPais write FPais;
     property situacao_cadastral: String read FSituacao_cadastral write FSituacao_cadastral;
+    property situacao_especial: String read FSituacao_especial write FSituacao_especial;
     property telefone1: String read FTelefone1 write FTelefone1;
+    property telefone2: String read FTelefone2 write FTelefone2;
     property tipo: String read FTipo write FTipo;
+    property tipo_logradouro: String read FTipo_logradouro write FTipo_logradouro;
     constructor Create;
     destructor Destroy; override;
     function ToJsonString: string;
@@ -188,8 +210,10 @@ type
     FData_entrada: TDate;
     FFaixa_etaria: String;
     FNome: String;
+    FNome_representante: String;
     FPais: TPaisClass;
     FPais_id: String;
+    FQualificacao_representante: String;
     FQualificacao_socio: TQualificacao_socioClass;
     FTipo: String;
   public
@@ -199,8 +223,10 @@ type
     property data_entrada: TDate read FData_entrada write FData_entrada;
     property faixa_etaria: String read FFaixa_etaria write FFaixa_etaria;
     property nome: String read FNome write FNome;
+    property nome_representante: String read FNome_representante write FNome_representante;
     property pais: TPaisClass read FPais write FPais;
     property pais_id: String read FPais_id write FPais_id;
+    property qualificacao_representante: String read FQualificacao_representante write FQualificacao_representante;
     property qualificacao_socio: TQualificacao_socioClass read FQualificacao_socio write FQualificacao_socio;
     property tipo: String read FTipo write FTipo;
     constructor Create;
@@ -239,7 +265,10 @@ type
     FEstabelecimento: TEstabelecimentoClass;
     FNatureza_juridica: TNatureza_juridicaClass;
     FPorte: TPorteClass;
+    FQualificacao_do_responsavel: String;
     FRazao_social: String;
+    FResponsavel_federativo: String;
+    FSimples: String;
     FSocios: TArray<TSociosClass>;
   public
     property atualizado_em: String read FAtualizado_em write FAtualizado_em;
@@ -248,7 +277,10 @@ type
     property estabelecimento: TEstabelecimentoClass read FEstabelecimento write FEstabelecimento;
     property natureza_juridica: TNatureza_juridicaClass read FNatureza_juridica write FNatureza_juridica;
     property porte: TPorteClass read FPorte write FPorte;
+    property qualificacao_do_responsavel: String read FQualificacao_do_responsavel write FQualificacao_do_responsavel;
     property razao_social: String read FRazao_social write FRazao_social;
+    property responsavel_federativo: String read FResponsavel_federativo write FResponsavel_federativo;
+    property simples: String read FSimples write FSimples;
     property socios: TArray<TSociosClass> read FSocios write FSocios;
     constructor Create;
     destructor Destroy; override;
